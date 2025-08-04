@@ -1,6 +1,5 @@
 services:
   - type: web
     name: habee-app-landing
-    env: static
     buildCommand: npm run build
     staticPublishPath: out
