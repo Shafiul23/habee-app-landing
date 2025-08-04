@@ -1,32 +1,21 @@
 @import "tailwindcss";
 
-/* Global color palette inspired by the Habee bee theme */
 :root {
-  /* Light, honey-tinted background with dark text */
   --background: #fffdf3;
-  --foreground: #1a1a1a;
+  --foreground: #111;
   --accent: #facc15;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark mode with warm accent highlights */
-    --background: #1a1a1a;
+    --background: #111;
     --foreground: #f3f4f6;
     --accent: #fcd34d;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, sans-serif;
 }
