@@ -30,3 +30,5 @@ This repository includes a `render.yaml` blueprint for deployment. To deploy:
 3. Set the build command to `npm run build` and the publish directory to `out`.
 
 Render will host the contents of the `out` directory as a static site.
+
+<a href="https://www.flaticon.com/free-icons/hexagon" title="hexagon icons">Hexagon icons created by Freepik - Flaticon</a>
