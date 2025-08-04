@@ -1,4 +1,5 @@
 import { CalendarCheck, BarChart, Bell } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,9 +11,9 @@ export default function Home() {
             <a href="#donate" className="hover:text-white">
               Support
             </a>
-            <a href="/privacy" className="hover:text-white">
+            <Link href="/privacy" className="hover:text-white">
               Privacy
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
