@@ -31,7 +31,7 @@ export default function Home() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="https://your-stripe-checkout-link.com"
+              href="https://donate.stripe.com/cNi7sN97gcizangfr43cc00"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[var(--accent)] text-black px-6 py-3 rounded-full font-semibold"
@@ -103,7 +103,7 @@ export default function Home() {
           </p>
           <div className="mt-8">
             <a
-              href="https://your-stripe-checkout-link.com"
+              href="https://donate.stripe.com/cNi7sN97gcizangfr43cc00"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[var(--accent)] text-black px-6 py-3 rounded-full font-semibold"
