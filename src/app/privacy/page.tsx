@@ -4,7 +4,12 @@ export default function Privacy() {
     <div className="flex flex-col min-h-screen">
       <header className="bg-[var(--accent)] py-4 px-6">
         <div className="mx-auto flex items-center justify-between">
-          <div className="text-2xl font-bold text-black">habee</div>
+          <Link
+            href="/"
+            className="text-2xl font-bold text-black hover:text-white transition-colors"
+          >
+            habee
+          </Link>
           <nav className="flex gap-6 text-sm font-medium text-black">
             <Link href="/#donate" className="hover:text-white">
               Support
@@ -29,7 +34,8 @@ export default function Privacy() {
                 create an account, track habits, and send optional reminders.
                 Passwords are hashed, authentication tokens live on your device,
                 and your habit data is kept in a database to show progress. We
-                do not sell personal data or use it for advertising or analytics.
+                do not sell personal data or use it for advertising or
+                analytics.
               </p>
             </section>
             <section>
@@ -48,12 +54,13 @@ export default function Privacy() {
                   the date and habit ID to mark progress
                 </li>
                 <li>
-                  <strong>Password-reset tokens</strong> – A token and expiration
-                  time are saved when you request a password reset
+                  <strong>Password-reset tokens</strong> – A token and
+                  expiration time are saved when you request a password reset
                 </li>
                 <li>
                   <strong>Local settings</strong> – Reminder preferences (time
-                  and enabled/disabled) are stored on your device via AsyncStorage
+                  and enabled/disabled) are stored on your device via
+                  AsyncStorage
                 </li>
                 <li>
                   <strong>Authentication token</strong> – A JWT token is stored
@@ -62,12 +69,14 @@ export default function Privacy() {
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold mb-2">How Your Data Is Used</h2>
+              <h2 className="text-xl font-semibold mb-2">
+                How Your Data Is Used
+              </h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>Registration and login</strong> – Email and password
-                  are validated, stored, and used to issue a JWT access token for
-                  authentication
+                  are validated, stored, and used to issue a JWT access token
+                  for authentication
                 </li>
                 <li>
                   <strong>Apple sign-in</strong> – If you choose Apple sign-in,
@@ -76,8 +85,8 @@ export default function Privacy() {
                   returned email
                 </li>
                 <li>
-                  <strong>Habit tracking</strong> – Habit names and log dates are
-                  used to display daily or monthly progress in the app
+                  <strong>Habit tracking</strong> – Habit names and log dates
+                  are used to display daily or monthly progress in the app
                 </li>
                 <li>
                   <strong>Password reset</strong> – A reset token is generated
@@ -86,13 +95,15 @@ export default function Privacy() {
                 </li>
                 <li>
                   <strong>Reminders</strong> – Optional daily reminders are
-                  scheduled using local notifications; the reminder time is saved
-                  on your device
+                  scheduled using local notifications; the reminder time is
+                  saved on your device
                 </li>
               </ul>
             </section>
             <section>
-              <h2 className="text-xl font-semibold mb-2">Third-Party Services</h2>
+              <h2 className="text-xl font-semibold mb-2">
+                Third-Party Services
+              </h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>Apple ID</strong> – Used for optional single-sign-on;
@@ -100,14 +111,14 @@ export default function Privacy() {
                   verification
                 </li>
                 <li>
-                  <strong>Expo modules</strong> – The app uses Expo libraries for
-                  secure storage and local notifications; these operate on the
-                  device and do not transmit habit data externally
+                  <strong>Expo modules</strong> – The app uses Expo libraries
+                  for secure storage and local notifications; these operate on
+                  the device and do not transmit habit data externally
                 </li>
                 <li>
-                  No payment processors, email delivery providers, analytics SDKs,
-                  or advertising networks are integrated; a search for common
-                  analytics or ad libraries returned no results
+                  No payment processors, email delivery providers, analytics
+                  SDKs, or advertising networks are integrated; a search for
+                  common analytics or ad libraries returned no results
                 </li>
               </ul>
             </section>
@@ -164,4 +175,3 @@ export default function Privacy() {
     </div>
   );
 }
-
