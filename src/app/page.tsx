@@ -77,7 +77,7 @@ export default function Home() {
                 Visual streaks
               </h3>
               <p className="text-sm leading-relaxed text-black">
-                See your progress day by day — with intuitive calendar color
+                See your progress day by day — with intuitive calendar colour
                 indicators.
               </p>
             </div>
