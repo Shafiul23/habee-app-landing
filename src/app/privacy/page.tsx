@@ -117,9 +117,23 @@ export default function Privacy() {
                   parties.
                 </li>
                 <li>
-                  No analytics SDKs, ad networks, or payment processors are
-                  integrated.
+                  <strong>Stripe</strong> – If you choose to support Habee
+                  through the
+                  <em> Support </em> button, you will be redirected to Stripe
+                  Checkout. Stripe collects payment details (such as card
+                  number, billing address, and email) directly for processing
+                  your donation. Habee does not store this information. See{" "}
+                  <a
+                    href="https://stripe.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Stripe’s Privacy Policy
+                  </a>{" "}
+                  for more details.
                 </li>
+                <li>No analytics SDKs or ad networks are integrated.</li>
               </ul>
             </section>
 
