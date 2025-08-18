@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 export default function Privacy() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -26,122 +27,176 @@ export default function Privacy() {
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Privacy Policy
           </h1>
+
           <div className="space-y-8 text-lg leading-relaxed">
-            <section>
+            {/* Overview */}
+            <section id="overview">
               <h2 className="text-xl font-semibold mb-2">Overview</h2>
               <p className="text-balance">
-                This habit-tracking app stores only the information needed to
-                create an account, track habits, and send optional reminders.
-                Passwords are hashed, authentication tokens live on your device,
-                and your habit data is kept in a database to show progress. We
-                do not sell personal data or use it for advertising or
-                analytics.
+                Habee stores only what’s needed to create an account, track
+                habits, and send optional reminders. Passwords are hashed,
+                authentication tokens are stored on your device, and habit data
+                lives in our database to show your progress. We do not sell
+                personal data or use it for advertising or analytics.
               </p>
             </section>
-            <section>
+
+            {/* Data We Collect */}
+            <section id="data-we-collect">
               <h2 className="text-xl font-semibold mb-2">Data We Collect</h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>Account details</strong> – Email address and a hashed
-                  password are stored for each account
+                  password.
                 </li>
                 <li>
-                  <strong>Habits</strong> – Each habit entry saves its name,
-                  start date, and the user who created it
+                  <strong>Habits</strong> – Name, start date, frequency
+                  (daily/weekly), and the owner.
                 </li>
                 <li>
-                  <strong>Habit logs</strong> – Each completion is recorded with
-                  the date and habit ID to mark progress
+                  <strong>Habit logs</strong> – Each completion recorded with
+                  date and habit ID.
                 </li>
                 <li>
-                  <strong>Password-reset tokens</strong> – A token and
-                  expiration time are saved when you request a password reset
+                  <strong>Password-reset tokens</strong> – Token + expiry when
+                  you request a reset.
                 </li>
                 <li>
-                  <strong>Local settings</strong> – Reminder preferences (time
-                  and enabled/disabled) are stored on your device via
-                  AsyncStorage
+                  <strong>Local settings</strong> – Reminder preferences stored
+                  on your device (AsyncStorage/Secure Store).
                 </li>
                 <li>
-                  <strong>Authentication token</strong> – A JWT token is stored
-                  in secure device storage to keep you signed in
+                  <strong>Authentication token</strong> – A JWT stored securely
+                  on your device to keep you signed in.
                 </li>
               </ul>
             </section>
-            <section>
+
+            {/* How Your Data Is Used */}
+            <section id="how-we-use">
               <h2 className="text-xl font-semibold mb-2">
                 How Your Data Is Used
               </h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Registration and login</strong> – Email and password
-                  are validated, stored, and used to issue a JWT access token
-                  for authentication
+                  <strong>Registration and login</strong> – Email/password issue
+                  a JWT for authentication.
                 </li>
                 <li>
-                  <strong>Apple sign-in</strong> – If you choose Apple sign-in,
-                  the app sends your Apple identity token to Apple’s servers for
-                  verification and creates or reuses an account based on the
-                  returned email
+                  <strong>Apple Sign-In</strong> – If used, Apple verifies your
+                  identity token and we create/reuse your account.
                 </li>
                 <li>
-                  <strong>Habit tracking</strong> – Habit names and log dates
-                  are used to display daily or monthly progress in the app
+                  <strong>Habit tracking</strong> – Habit names, schedules, and
+                  logs drive daily/monthly progress views.
                 </li>
                 <li>
-                  <strong>Password reset</strong> – A reset token is generated
-                  and stored to let you change your password; the implementation
-                  currently logs the reset link rather than emailing it
+                  <strong>Password reset</strong> – A time-limited token enables
+                  password changes.
                 </li>
                 <li>
-                  <strong>Reminders</strong> – Optional daily reminders are
-                  scheduled using local notifications; the reminder time is
-                  saved on your device
+                  <strong>Reminders</strong> – Optional local notifications
+                  scheduled at times you set.
                 </li>
               </ul>
             </section>
-            <section>
+
+            {/* Third-Party Services */}
+            <section id="third-parties">
               <h2 className="text-xl font-semibold mb-2">
                 Third-Party Services
               </h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Apple ID</strong> – Used for optional single-sign-on;
-                  Apple receives the identity token supplied during login for
-                  verification
+                  <strong>Apple ID</strong> – Optional single sign-on; Apple
+                  receives the identity token for verification.
                 </li>
                 <li>
-                  <strong>Expo modules</strong> – The app uses Expo libraries
-                  for secure storage and local notifications; these operate on
-                  the device and do not transmit habit data externally
+                  <strong>Expo modules</strong> – Secure storage and local
+                  notifications run on-device; we don’t send habit data to third
+                  parties.
                 </li>
                 <li>
-                  No payment processors, email delivery providers, analytics
-                  SDKs, or advertising networks are integrated; a search for
-                  common analytics or ad libraries returned no results
+                  No analytics SDKs, ad networks, or payment processors are
+                  integrated.
                 </li>
               </ul>
             </section>
-            <section>
+
+            {/* Your Choices */}
+            <section id="your-choices">
               <h2 className="text-xl font-semibold mb-2">Your Choices</h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  You may delete your account at any time, which removes your
-                  user record and associated habits from the database
+                  <strong>Partial data deletion (in-app)</strong> – You can
+                  delete individual habits at any time. When a habit is deleted,{" "}
+                  <em>all associated logs</em> are permanently removed from our
+                  systems.
                 </li>
                 <li>
-                  Reminders are optional; you can enable, disable, or reschedule
-                  them in settings
+                  <strong>Full account deletion (in-app)</strong> – You can
+                  permanently delete your account and all associated data.
+                </li>
+                <li>
+                  <strong>Reminders</strong> – Fully optional; enable, disable,
+                  or reschedule them in Settings.
                 </li>
               </ul>
             </section>
-            <section>
+
+            {/* Data Deletion Details (Policy-focused) */}
+            <section id="data-deletion">
+              <h2 className="text-xl font-semibold mb-2">Deleting Your Data</h2>
+
+              <h3 className="text-lg font-semibold mt-4">
+                Delete specific data (habits & logs)
+              </h3>
+              <p className="mt-2">
+                To remove a subset of your data without deleting your account,
+                delete the habit(s) you no longer want. This action also deletes
+                all completion logs tied to those habits.
+              </p>
+
+              <h3 className="text-lg font-semibold mt-4">
+                Delete your account (all data)
+              </h3>
+              <ol className="mt-2 list-decimal pl-6 space-y-1">
+                <li>Open the Habee app</li>
+                <li>
+                  Go to <strong>Settings → Delete Account</strong>
+                </li>
+                <li>Confirm deletion</li>
+              </ol>
+              <p className="mt-2">
+                Account deletion removes your user record and all associated
+                data (habits, logs, reminders) from our active systems.
+              </p>
+              <p className="mt-2">
+                In-app deletion is immediate. For off-app requests, we aim to
+                respond within <strong>72 hours</strong>.
+              </p>
+
+              <h3 className="text-lg font-semibold mt-4">
+                Can’t access the app?
+              </h3>
+              <p className="mt-2">
+                Email us at{" "}
+                <a className="underline" href="mailto:habee.app@gmail.com">
+                  habee.app@gmail.com
+                </a>{" "}
+                and we’ll assist with deleting your data. For your security, we
+                may ask for verification to confirm ownership.
+              </p>
+            </section>
+
+            {/* Data Sharing & Retention */}
+            <section id="retention">
               <h2 className="text-xl font-semibold mb-2">
                 Data Sharing and Retention
               </h2>
               <p>
-                Data is stored in a database controlled by the app’s operators
-                and is retained only as long as necessary for the services
+                Data is stored in infrastructure controlled by Habee and
+                retained only as long as necessary to provide the services
                 described.
               </p>
               <p className="mt-4">
@@ -153,16 +208,32 @@ export default function Privacy() {
                 when you log out.
               </p>
             </section>
-            <section>
+
+            {/* No Ads / Sales */}
+            <section id="no-ads">
               <h2 className="text-xl font-semibold mb-2">
                 No Advertising or Sale of Data
               </h2>
               <p>
-                The codebase contains no advertising or analytics libraries, and
-                we do not sell, rent, or share personal data with third parties
-                for marketing purposes. Your information is used only to provide
-                the habit-tracking features and optional reminders described
-                above.
+                We do not sell, rent, or share personal data for marketing
+                purposes and we do not include advertising or analytics SDKs.
+                Your information is used only to provide habit tracking and
+                optional reminders.
+              </p>
+            </section>
+
+            {/* Contact */}
+            <section id="contact">
+              <h2 className="text-xl font-semibold mb-2">Contact</h2>
+              <p>
+                For privacy questions or data requests, email{" "}
+                <a className="underline" href="mailto:habee.app@gmail.com">
+                  habee.app@gmail.com
+                </a>
+                .
+              </p>
+              <p className="mt-2 text-sm text-neutral-500">
+                Last updated: 18 August 2025
               </p>
             </section>
           </div>
