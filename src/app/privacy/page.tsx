@@ -1,26 +1,9 @@
-import Link from "next/link";
+import Nav from "@/components/nav";
 
 export default function Privacy() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-[var(--accent)] py-4 px-6">
-        <div className="mx-auto flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-2xl font-bold text-black hover:text-white transition-colors"
-          >
-            habee
-          </Link>
-          <nav className="flex gap-6 text-sm font-medium text-black">
-            <Link href="/#donate" className="hover:text-white">
-              Support
-            </Link>
-            <Link href="/privacy" className="hover:text-white">
-              Privacy
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Nav />
 
       <main className="flex-1 px-6">
         <div className="max-w-3xl mx-auto py-12">

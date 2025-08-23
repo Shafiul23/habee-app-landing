@@ -1,27 +1,10 @@
-import { CalendarCheck, BarChart, Bell } from "lucide-react";
 import Link from "next/link";
+import Nav from "@/components/nav";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-[var(--accent)] py-4 px-6">
-        <div className="mx-auto flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-2xl font-bold text-black hover:text-white transition-colors"
-          >
-            habee
-          </Link>
-          <nav className="flex gap-6 text-sm font-medium text-black">
-            <a href="#donate" className="hover:text-white">
-              Support
-            </a>
-            <Link href="/privacy" className="hover:text-white">
-              Privacy
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Nav />
 
       <main className="flex-1 flex flex-col items-center text-center px-6">
         <div className="max-w-3xl w-full">
@@ -35,63 +18,42 @@ export default function Home() {
             satisfying visual of your long-term progress.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://donate.stripe.com/cNi7sN97gcizangfr43cc00"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/support"
               className="bg-[var(--accent)] text-black px-6 py-3 rounded-full font-semibold"
             >
               Support
-            </a>
-            <a
-              href="https://github.com/shafiul23/habee-app"
-              target="_blank"
-              rel="noopener noreferrer"
+            </Link>
+            <Link
+              href="/about"
               className="border border-[var(--accent)] text-[var(--accent)] px-6 py-3 rounded-full font-semibold"
             >
-              View GitHub
-            </a>
+              About
+            </Link>
           </div>
         </div>
       </main>
 
       <section id="features" className="py-16 px-6 bg-[var(--accent)] mt-10">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-black">
-            What makes Habee different?
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-black">
+            Features
           </h2>
-          <div className="grid gap-16 sm:grid-cols-3 text-left">
-            <div className="space-y-4">
-              <CalendarCheck className="w-6 h-6 text-black" />
-              <h3 className="font-semibold text-lg text-black">
-                Daily habit logging
-              </h3>
-              <p className="text-sm leading-relaxed text-black">
-                Tick off your goals with ease in a clean, focused interface
-                designed for speed.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <BarChart className="w-6 h-6 text-black" />
-              <h3 className="font-semibold text-lg text-black">
-                Visual streaks
-              </h3>
-              <p className="text-sm leading-relaxed text-black">
-                See your progress day by day — with intuitive calendar colour
-                indicators.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <Bell className="w-6 h-6 text-black" />
-              <h3 className="font-semibold text-lg text-black">
-                Smart reminders
-              </h3>
-              <p className="text-sm leading-relaxed text-black">
-                Optional nudges that fit your schedule — no spam, just gentle
-                motivation.
-              </p>
-            </div>
-          </div>
+          <ul className="list-disc space-y-4 text-left text-lg leading-relaxed text-black">
+            <li>
+              Create, edit, and delete habits with daily or weekly schedules and
+              day-of-week selection.
+            </li>
+            <li>
+              Habit archiving/unarchiving and archived-habits management.
+            </li>
+            <li>
+              Daily reminder plus custom per-habit reminders (up to 20).
+            </li>
+            <li>
+              Support link, about section, logout, and account deletion.
+            </li>
+          </ul>
         </div>
       </section>
 
