@@ -1,4 +1,17 @@
+import { Card } from "@/components/Card";
+import { FeatureRow } from "@/components/FeatureRow";
 import Nav from "@/components/nav";
+import {
+  CalendarCheck,
+  Hexagon,
+  Bell,
+  Archive,
+  Edit,
+  LayoutGrid,
+  NotebookPen,
+  Moon,
+  Scaling,
+} from "lucide-react";
 
 export default function About() {
   return (
@@ -7,139 +20,173 @@ export default function About() {
 
       <main className="flex-1 px-6">
         <div className="max-w-3xl mx-auto py-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-            About Habee
-          </h1>
-          <p className="text-center text-sm opacity-70">
-            Habee (ha‑bee) — habits with intention, visuals that keep you going.
-          </p>
+          {/* Title */}
+          <header className="text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+              About Habee
+            </h1>
+            <div className="inline-flex items-center gap-2 mt-3">
+              <span className="text-sm opacity-70">Habee (ha‑bee)</span>
+            </div>
+          </header>
 
-          {/* Why I built Habee */}
-          <section className="mt-10 space-y-6">
-            <h2 className="text-xl font-semibold">Why I built it</h2>
-            <p className="text-lg leading-relaxed text-balance">
-              I used to track habits in a spreadsheet. It worked: I’d tick off
-              my day, then get a little dopamine hit seeing a{" "}
-              <strong>colour‑coded month</strong>. That view gave me honest
-              feedback — what was working and what wasn’t — so I could{" "}
-              <strong>adjust goals to reality</strong>. If 10k steps wasn’t
-              happening for weeks, I’d shift to 8k. If “take supplements” was
-              perfect for 3 months, I’d archive it and make room for a new
-              habit.
-            </p>
-            <p className="text-lg leading-relaxed text-balance">
-              The downside? Spreadsheets are clunky on a phone — horizontal
-              scrolling, fiddly cells, slow on the move. The apps I tried were
-              either <strong>paywalled</strong> for basic usage or{" "}
-              <strong>cluttered with ads</strong>. So I built Habee with a
-              simple philosophy:{" "}
-              <strong>clean, ad‑free, distraction‑free</strong>.
-            </p>
+          {/* Why I built it */}
+          <section className="mt-12">
+            <Card>
+              <h2 className="text-xl font-semibold">Why I built it</h2>
+              <p className="mt-4 text-lg leading-relaxed text-balance">
+                I used to track habits in a spreadsheet. It worked: ticking off
+                days and seeing a <strong>colour‑coded month</strong> gave
+                honest feedback. Wins were rewarding; misses told me to{" "}
+                <strong>adjust goals to reality</strong> — 10k steps → 8k, or
+                archiving “take supplements” after months of consistency.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-balance">
+                The downside? Spreadsheets are clunky on a phone — horizontal
+                scrolling, fiddly cells, slow on the move. Most apps I tried
+                were either
+                <strong> paywalled</strong> for basic use or{" "}
+                <strong>cluttered with ads</strong>. So I built Habee:{" "}
+                <strong>clean, ad‑free, distraction‑free</strong>.
+              </p>
+            </Card>
           </section>
 
           {/* Brand & philosophy */}
-          <section className="mt-12 space-y-6">
-            <h2 className="text-xl font-semibold">What Habee stands for</h2>
-            <p className="text-lg leading-relaxed text-balance">
-              <strong>Habee</strong> is <em>habit</em> + <em>bee</em>. The brand
-              is <strong>black and yellow</strong> because we take our cue from
-              the bee: consistent work, done over time, creating value and
-              beauty. You’ll see <strong>hexagons</strong> in the design — a nod
-              to the honeycomb. Simple building blocks that, when repeated,
-              become something strong.
-            </p>
-            <p className="text-lg leading-relaxed text-balance">
-              Habee isn’t trying to be an overwhelming productivity suite. It’s
-              a <strong>simple habit tracker</strong> that makes you{" "}
-              <strong>feel good about progress</strong> and gives you{" "}
-              <strong>satisfying visuals</strong> to stay consistent.
-            </p>
+          <section className="mt-10">
+            <Card accent>
+              <h2 className="text-xl font-semibold">What Habee stands for</h2>
+              <p className="mt-4 text-lg leading-relaxed text-balance">
+                <strong>Habee</strong> blends <em>habit</em> + <em>bee</em>. The{" "}
+                <strong>black &amp; yellow</strong> identity nods to focused,
+                consistent work. You’ll notice <strong>hexagons</strong>{" "}
+                throughout — a honeycomb motif: simple building blocks that
+                compound into something strong.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-balance">
+                Not a bloated “productivity suite” — just a{" "}
+                <strong>simple habit tracker</strong> that makes you{" "}
+                <strong>feel good about progress</strong> with
+                <strong> satisfying visuals</strong>.
+              </p>
+            </Card>
           </section>
 
-          {/* How it works / Ideal workflow */}
-          <section className="mt-12 space-y-6">
-            <h2 className="text-xl font-semibold">How it’s meant to be used</h2>
-            <p className="text-lg leading-relaxed text-balance">
-              The ideal workflow is deliberately short:
-            </p>
-            <ol className="list-decimal pl-6 text-lg leading-relaxed space-y-2">
-              <li>Open the app once a day.</li>
-              <li>Tick off what you did (leave missed items blank).</li>
-              <li>Close the app — total time: ~20 seconds.</li>
-            </ol>
-            <p className="text-lg leading-relaxed text-balance">
-              Habee handles the visuals — no formatting, no spreadsheet setup —
-              just an automatically generated <strong>calendar view</strong>{" "}
-              that reflects your month at a glance.
-            </p>
+          {/* How to use */}
+          <section className="mt-10">
+            <Card>
+              <h2 className="text-xl font-semibold">
+                How it’s meant to be used
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed">
+                Keep it light and repeatable:
+              </p>
+              <ol className="list-decimal pl-6 mt-2 text-lg leading-relaxed space-y-2">
+                <li>Open the app once a day.</li>
+                <li>Tick off what you did (leave misses blank).</li>
+                <li>Close the app — ~20 seconds total.</li>
+              </ol>
+              <p className="mt-4 text-lg leading-relaxed text-balance">
+                Habee handles the visuals for you — an automatic
+                <strong> calendar view</strong> that reflects your month at a
+                glance.
+              </p>
+            </Card>
           </section>
 
           {/* Current features */}
-          <section className="mt-12 space-y-4">
-            <h2 className="text-lg font-semibold mt-6">
-              What’s in the app today
-            </h2>
-            <ul className="list-disc pl-6 text-lg leading-relaxed space-y-2">
-              <li>Clean daily logging with a focused UI.</li>
-              <li>
-                Option to also create weekly habits. Some tasks might not be
-                daily - like journalling or cleaning your room, so the option to
-                create habits that are only valid on the days of the week of
-                your choosing. For example, a habit set only for Sunday will not
-                show up on the other days of the week. On the calendar screen,
-                it will not affect the visuals of days it is not registered for
-                and on the grid screen will appear as grey instead of red (which
-                usually indicates a missed habit)
-              </li>
-              <li>
-                Colour‑coded calendar to see streaks and trends. Users can also
-                press on the calendar cells to get more information about days
-                of the week - like how many habits were completed for that
-                specific day.
-              </li>
-              <li>
-                Optional reminders that nudge, not nag. Users can set up a daily
-                reminder in the notifications setting to remind them to log
-                habits. Additionally, custom reminders can be set per habit
-                using the edit habit menu on the home screen.{" "}
-              </li>
-              <li>
-                Manage habits over time with archiving. Some habits might be
-                seasonal or considered complete. If so, the continuing to track
-                them may not be productive, but instead of continuing to tick
-                them off over time or ignoring them to show up as red, users can
-                archive the habits to retire anything they are done with without
-                deleting all the visual progress it built up.
-              </li>
-              <li>
-                Habit names can also be edited for any spelling mistakes or
-                changes, as well as the option to fully delete the habit to
-                remove it from all visual progress tracking.
-              </li>
-            </ul>
-
-            <h2 className="text-lg font-semibold mt-6">Future of Habee?</h2>
-            <p className="text-lg leading-relaxed text-balance">
-              The plan for Habee is to continously improve based on user
-              feedback, and build something that truly reflects the desires of
-              the community. Please leave feedback via the App Store or at
-              habee.app@gmail.com Some of the current features in the pipeline
-              include: dark mode, journalling and non-binary habit logging. With
-              this, users will be able to track things like daily calories and
-              have the app calculate weekly averages to make goals like being in
-              a deficit easier (instead of daily calorie tracking where Weekends
-              make it tough to maintain a daily deficit)
-            </p>
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold">What’s in the app today</h2>
+            <div className="mt-6 grid gap-4">
+              <FeatureRow
+                icon={<CalendarCheck className="w-5 h-5" aria-hidden />}
+                title="Clean daily logging"
+                desc="Fast, focused check‑ins with a minimal UI."
+              />
+              <FeatureRow
+                icon={<Hexagon className="w-5 h-5" aria-hidden />}
+                title="Weekly habits (by day)"
+                desc="Schedule habits for specific weekdays. Unscheduled days don’t penalise your visuals; in the grid they appear grey (not red)."
+              />
+              <FeatureRow
+                icon={<LayoutGrid className="w-5 h-5" aria-hidden />}
+                title="Colour‑coded calendar"
+                desc="See streaks and trends; tap a day for completions and details."
+              />
+              <FeatureRow
+                icon={<Bell className="w-5 h-5" aria-hidden />}
+                title="Smart reminders"
+                desc="Set a daily reminder or per‑habit custom nudges — supportive, not spammy."
+              />
+              <FeatureRow
+                icon={<Archive className="w-5 h-5" aria-hidden />}
+                title="Archive & evolve"
+                desc="Retire seasonal or ‘complete’ habits without losing past progress."
+              />
+              <FeatureRow
+                icon={<Edit className="w-5 h-5" aria-hidden />}
+                title="Edit or delete"
+                desc="Fix names, fine‑tune scope, or remove a habit entirely."
+              />
+            </div>
           </section>
 
-          {/* CTAs */}
-          <section className="mt-12 flex flex-col sm:flex-row gap-4">
-            <a
-              href="/support"
-              className="border border-[var(--accent)] text-[var(--accent)] px-6 py-3 rounded-full font-semibold text-center"
-            >
-              How to support Habee
-            </a>
+          {/* Roadmap */}
+          <section className="mt-12">
+            <Card>
+              <h2 className="text-xl font-semibold">Where it’s going</h2>
+              <p className="mt-4 text-lg leading-relaxed text-balance">
+                Incremental improvements guided by user feedback — without
+                bloat. On the near‑term list:
+              </p>
+              <ul className="mt-4 list-disc pl-6 text-lg leading-relaxed space-y-2">
+                <li className="flex items-start gap-2">
+                  <Moon className="w-5 h-5 mt-1 shrink-0" aria-hidden />
+                  <span>
+                    <strong>Dark mode</strong> — easier on the eyes, same clean
+                    UI.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <NotebookPen className="w-5 h-5 mt-1 shrink-0" aria-hidden />
+                  <span>
+                    <strong>Journalling</strong> — optional reflections
+                    alongside your habits.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Scaling className="w-5 h-5 mt-1 shrink-0" aria-hidden />
+                  <span>
+                    <strong>Non‑binary logging</strong> — track ranges/values
+                    (e.g., calories) and see weekly averages to support flexible
+                    goals.
+                  </span>
+                </li>
+              </ul>
+
+              <p className="mt-6 text-lg leading-relaxed">
+                Have ideas? Email{" "}
+                <a
+                  className="underline decoration-[var(--accent)] underline-offset-4"
+                  href="mailto:habee.app@gmail.com"
+                >
+                  habee.app@gmail.com
+                </a>{" "}
+                or leave a review on the App Store.
+              </p>
+            </Card>
+          </section>
+
+          {/* CTA */}
+          <section className="mt-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/support"
+                className="bg-[var(--accent)]  text-black px-6 py-3 rounded-full font-semibold text-center hover:opacity-90 transition"
+              >
+                How to support Habee
+              </a>
+            </div>
           </section>
         </div>
       </main>

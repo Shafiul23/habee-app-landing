@@ -36,7 +36,7 @@ export default function Home() {
             </a>
             <a
               href="/about"
-              className="border border-[var(--accent)] text-[var(--accent)] px-6 py-3 rounded-full font-semibold"
+              className="bg-[var(--accent)] text-black px-6 py-3 rounded-full font-semibold"
             >
               About
             </a>
@@ -102,7 +102,7 @@ export default function Home() {
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/support"
-              className="border border-[var(--accent)] text-[var(--accent)] px-6 py-3 rounded-full font-semibold"
+              className="bg-[var(--accent)] text-black px-6 py-3 rounded-full font-semibold"
             >
               Learn more
             </a>
